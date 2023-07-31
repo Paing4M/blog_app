@@ -196,11 +196,11 @@
 
             </div>
 
-
+            {{--
             <div class="mb-3">
               <label for="">Tags</label>
-              <input type="text" name="tags" wire:model='tags' class="form-control">
-            </div>
+              <input type="text" name="tags"  class="form-control">
+            </div> --}}
 
             <div class="mb-3">
               <label for="">Content</label>
@@ -231,9 +231,9 @@
 @push('scripts')
   <script src="{{ asset('asmify/jquery.amsify.suggestags.js') }}"></script>
 
-<script>
-$('input[name="country"]').amsifySuggestags()
-</script>
+  <script>
+    $('input[name="country"]').amsifySuggestags()
+  </script>
 
   <script>
     $(document).ready(function() {
