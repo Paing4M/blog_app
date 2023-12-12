@@ -86,8 +86,10 @@
                     {{ Auth::user()->name }} </span>
                 </a>
                 <div class="dropdown-menu">
+                  @if (Auth::user()->role == 'admin')
+                    <a class="dropdown-item" href="{{ route('admin.dashboard') }}">Dashboard</a>
+                  @endif
                   <a class="dropdown-item" href="{{ route('profile.edit') }}">Profile</a>
-
                   {{-- <a class="dropdown-item" href="author.html">Logout</a> --}}
 
                   <form action="{{ route('logout') }}" method="POST">
@@ -171,8 +173,8 @@
           stroke="#040306" stroke-miterlimit="10" />
       </g>
       <defs>
-        <filter id="filter0_d" x="0.905273" y="0" width="37.8663" height="38.1979"
-          filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <filter id="filter0_d" x="0.905273" y="0" width="37.8663" height="38.1979" filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB">
           <feFlood flood-opacity="0" result="BackgroundImageFix" />
           <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
           <feOffset dy="4" />

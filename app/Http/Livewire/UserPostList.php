@@ -16,7 +16,7 @@ class UserPostList extends Component {
   use WithFileUploads, WithPagination;
   protected $paginationTheme = 'bootstrap';
 
-  public $image, $title, $category, $content, $edit_id, $tempImg, $tags;
+  public $image, $title, $category, $content, $edit_id, $tempImg;
 
   public $search, $postBy, $categoryBy;
 
@@ -46,7 +46,6 @@ class UserPostList extends Component {
       'title' => 'required',
       'image' => 'required|image|mimes:jpeg,png,gif,jpg',
       'category' => 'required',
-      'tags' => 'required',
       'content' => 'required'
     ]);
 
@@ -83,7 +82,6 @@ class UserPostList extends Component {
     $this->validate([
       'title' => 'required',
       'category' => 'required',
-      'tags' => 'required',
       'content' => 'required',
     ]);
 
@@ -145,6 +143,7 @@ class UserPostList extends Component {
     $this->content = '';
     $this->tempImg = '';
   }
+
 
 
   public function render() {

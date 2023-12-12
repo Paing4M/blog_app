@@ -82,6 +82,10 @@
 
       <!-- Divider -->
       <hr class="sidebar-divider">
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('user-index') }}">
+          <span>Back To User Page</span></a>
+      </li>
 
       <li class="nav-item @if (request()->is('admin/profile')) active @endif"">
         <a class="nav-link" href="{{ route('admin.profile.edit') }}">

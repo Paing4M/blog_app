@@ -59,7 +59,6 @@ class PostList extends Component {
     $post->user_id = Auth()->user()->id;
     $post->category_id = $this->category;
     $post->content = $this->content;
-    $post->tags = $this->tags;
     $post->image = $fileName;
     $this->image->storeAs('public/images', $fileName);
     $saved = $post->save();
@@ -86,7 +85,6 @@ class PostList extends Component {
     $this->validate([
       'title' => 'required',
       'category' => 'required',
-      'tags' => 'required',
       'content' => 'required',
     ]);
 
@@ -107,7 +105,6 @@ class PostList extends Component {
       'user_id' => Auth::user()->id,
       'category_id' => $this->category,
       'content' => $this->content,
-      'tags' => $this->tags,
       'image' => $fileName,
     ]);
 

@@ -2,9 +2,6 @@
   use Illuminate\Support\Carbon;
 @endphp
 
-@push('styles')
-  <link rel="stylesheet" href="{{ asset('asmify/amsify.suggestags.css') }}">
-@endpush
 
 <div class="pb-3">
   <div>
@@ -16,7 +13,8 @@
   </div>
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Posts</h1>
-    <button class="btn btn-primary button-success" data-bs-toggle="modal" data-bs-target="#postingModal">Add Post</button>
+    <button class="btn btn-primary button-success" data-bs-toggle="modal" data-bs-target="#postingModal">Add
+      Post</button>
   </div>
 
   <div class="mb-1">
@@ -169,7 +167,6 @@
                   @endforeach
 
                 </select>
-
                 @error('category')
                   <span class="text-danger">{{ $message }}</span>
                 @enderror
@@ -193,14 +190,7 @@
               @error('image')
                 <span class="text-danger block col-12">{{ $message }}</span>
               @enderror
-
             </div>
-
-            {{--
-            <div class="mb-3">
-              <label for="">Tags</label>
-              <input type="text" name="tags"  class="form-control">
-            </div> --}}
 
             <div class="mb-3">
               <label for="">Content</label>
@@ -229,12 +219,6 @@
 
 
 @push('scripts')
-  <script src="{{ asset('asmify/jquery.amsify.suggestags.js') }}"></script>
-
-  <script>
-    $('input[name="country"]').amsifySuggestags()
-  </script>
-
   <script>
     $(document).ready(function() {
 
